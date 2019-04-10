@@ -17,7 +17,7 @@ public class StringStackTest
         s = new StringStack(5); // keep size of 5 !!
     }
     
-    /**
+    /** Test1
      * tests if stack is empty after initialization
      * 
      * use assert
@@ -29,7 +29,7 @@ public class StringStackTest
       assertTrue(s.isEmpty());
     }
     
-    /**
+    /** Test2
      * tests if stack is empty after pushing
      * 
      * use assert
@@ -42,7 +42,7 @@ public class StringStackTest
       assertFalse(s.isEmpty());
     }
 
-    /**
+    /** Test3
      * tests push and pop function
      * 
      * do following test
@@ -66,7 +66,7 @@ public class StringStackTest
     	assertTrue(s.isEmpty());
     }
     
-    /**
+    /** Test4
      * Feel Free to insert other test cases for the String Stack Implementation !!!
      */
     
@@ -80,10 +80,21 @@ public class StringStackTest
     		s.push("test");
     	}
     }
-
+  
+    // Test5
     @Test(expected=IllegalStateException.class)
     public void testPopException() throws Exception {
     	s.pop();
     }
 
+    /**
+     * Testing for IllegalArgumentException, which should be thrown at faulty Constructor usage
+     * @throws Exception
+     */
+
+    // Test5
+     @Test(expected=IllegalArgumentException.class)
+    public void testZeroConstructor() throws Exception {
+    	StringStack testStack = new StringStack(0);
+    }
 }
