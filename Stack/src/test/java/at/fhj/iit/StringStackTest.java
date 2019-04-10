@@ -81,4 +81,9 @@ public class StringStackTest
     	}
     }
 
+    @Test(expected=IllegalStateException.class)
+    public void testPopException() throws Exception {
+    	s.pop();
+    }
+
 }
