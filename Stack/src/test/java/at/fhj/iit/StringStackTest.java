@@ -70,4 +70,15 @@ public class StringStackTest
      * Feel Free to insert other test cases for the String Stack Implementation !!!
      */
     
+    /**
+     * Testing for IllegalStateException, which should be thrown at illegal push or pop operations
+     * @throws Exception
+     */
+    @Test(expected=IllegalStateException.class)
+    public void testPushException() throws Exception {
+    	while (true) {
+    		s.push("test");
+    	}
+    }
+
 }
