@@ -24,3 +24,6 @@ hs_err_pid*
 
 #Vim TempFiles
 *.swp
+
+#target folder maven
+/Stack/target/*
