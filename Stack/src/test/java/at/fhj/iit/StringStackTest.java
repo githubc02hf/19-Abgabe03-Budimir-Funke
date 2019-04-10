@@ -55,6 +55,15 @@ public class StringStackTest
     @Test
     public void testPushPop() throws Exception
     {
+      String s1 = "test1";
+    	String s2 = "test2";
+    	s.push(s1);
+    	assertFalse(s.isEmpty());
+    	s.push(s2);
+    	assertEquals(s2,s.pop());
+    	assertFalse(s.isEmpty());
+    	assertEquals(s1,s.pop());
+    	assertTrue(s.isEmpty());
     }
     
     /**
